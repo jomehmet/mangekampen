@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_no_ciber_mangekampen_model_Ovelse" object="${ovelse}" path="/ovelses" z="5zOZQm/spdlTq2yZVjhCy4AIr7Q=">
+        <field:display field="navn" id="s_no_ciber_mangekampen_model_Ovelse_navn" object="${ovelse}" z="msS1J1Nv8ceWwYi48tmEy1/Cw3g="/>
+        <field:display field="gruppeType" id="s_no_ciber_mangekampen_model_Ovelse_gruppeType" object="${ovelse}" z="1HjnH6NvqnTfjtJ36gDMU99u3NY="/>
+        <field:display date="true" dateTimePattern="${ovelse_dato_date_format}" field="dato" id="s_no_ciber_mangekampen_model_Ovelse_dato" object="${ovelse}" z="ijxg8LOtotnK6n4HlUDDEVWHiws="/>
+        <field:display field="deltakelser" id="s_no_ciber_mangekampen_model_Ovelse_deltakelser" object="${ovelse}" z="GJD6Qs8M+MsV4Yy5eSQ/DCKbLL4="/>
+    </page:show>
+</div>

@@ -1,0 +1,30 @@
+project --topLevelPackage no.ciber.mangekampen --projectName mangekampen --java 6 --packaging JAR
+jpa setup --database HYPERSONIC_IN_MEMORY --provider HIBERNATE 
+
+entity jpa --class ~.model.Sesong
+entity jpa --class ~.model.Ovelse
+entity jpa --class ~.model.Deltakelse
+entity jpa --class ~.model.Deltaker
+
+field string --fieldName navn --notNull --unique --class ~.model.Sesong
+field set --fieldName ovelser --type ~.model.Ovelse --class ~.model.Sesong
+
+field string --fieldName navn --notNull --unique --class ~.model.Ovelse
+field string --fieldName gruppeType  --class ~.model.Ovelse
+field date --fieldName dato --type java.util.Date --class ~.model.Ovelse
+field set --fieldName deltakelser --type ~.model.Deltakelse --class ~.model.Ovelse
+
+field reference --fieldName deltaker --type ~.model.Deltaker --class ~.model.Deltakelse
+field number --fieldName resultat --type java.lang.Number --class ~.model.Deltakelse
+
+field string --fieldName brukernavn --class ~.model.Deltaker --unique
+field string --fieldName fornavn --class ~.model.Deltaker
+field string --fieldName etternavn --class ~.model.Deltaker
+field boolean --fieldName isMale --class ~.model.Deltaker
+field date --fieldName created --type java.util.Date --class ~.model.Deltaker
+
+//web mvc setup
+//web mvc all --package ~.web
+
+//json all
+//web mvc json all

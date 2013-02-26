@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:menu="urn:jsptagdir:/WEB-INF/tags/menu" class="well" id="menu" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <menu:menu id="_menu" z="nZaf43BjUg1iM0v70HJVEsXDopc=">
+        <menu:category id="c_deltakelse" z="lRRbKMzuGKFJeadl958sW0tqj+8=">
+            <menu:item id="i_deltakelse_new" messageCode="global_menu_new" url="/deltakelses?form" z="OkkRDbsP3bZCC6bGibfXC+QHNtk="/>
+            <menu:item id="i_deltakelse_list" messageCode="global_menu_list" url="/deltakelses?page=1&amp;size=${empty param.size ? 10 : param.size}" z="ou/13Uq8bv+1uF/TMOBR9M2ZW4E="/>
+        </menu:category>
+        <menu:category id="c_deltaker" z="WVV05vOehv/DoJK0cMI8pakTtRA=">
+            <menu:item id="i_deltaker_new" messageCode="global_menu_new" url="/deltakers?form" z="7E0KhwrKZ9IaIDPOjy3MjnZaUvk="/>
+            <menu:item id="i_deltaker_list" messageCode="global_menu_list" url="/deltakers?page=1&amp;size=${empty param.size ? 10 : param.size}" z="lImDAgQb2Ecz38HLvIkm+awLl60="/>
+        </menu:category>
+        <menu:category id="c_ovelse" z="XQn/06LHI8cyzYjhbsTaO8iaQRw=">
+            <menu:item id="i_ovelse_new" messageCode="global_menu_new" url="/ovelses?form" z="qhtaET8w0eDbRngAtAd561iKwC4="/>
+            <menu:item id="i_ovelse_list" messageCode="global_menu_list" url="/ovelses?page=1&amp;size=${empty param.size ? 10 : param.size}" z="TF73S7luEswfhHdx50272klRrTA="/>
+        </menu:category>
+        <menu:category id="c_sesong" z="8g2NT2pjcqTy+MrLIn3r2E4CPxY=">
+            <menu:item id="i_sesong_new" messageCode="global_menu_new" url="/sesongs?form" z="UyWLdTyB4KE5bagOOXZ4s1W5CX8="/>
+            <menu:item id="i_sesong_list" messageCode="global_menu_list" url="/sesongs?page=1&amp;size=${empty param.size ? 10 : param.size}" z="09nH3w8qpk8spzmJ+dGbbg/PZFc="/>
+        </menu:category>
+    </menu:menu>
+</div>

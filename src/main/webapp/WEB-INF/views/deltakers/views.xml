@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+    <definition extends="default" name="deltakers/list">
+        <put-attribute name="body" value="/WEB-INF/views/deltakers/list.jspx"/>
+    </definition>
+<definition extends="default" name="deltakers/show">
+        <put-attribute name="body" value="/WEB-INF/views/deltakers/show.jspx"/>
+    </definition>
+<definition extends="default" name="deltakers/create">
+        <put-attribute name="body" value="/WEB-INF/views/deltakers/create.jspx"/>
+    </definition>
+<definition extends="default" name="deltakers/update">
+        <put-attribute name="body" value="/WEB-INF/views/deltakers/update.jspx"/>
+    </definition>
+</tiles-definitions>

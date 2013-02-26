@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_no_ciber_mangekampen_model_Sesong" items="${sesongs}" z="2xO76ZiMaMl0aTWq6WfCT7zV31o=">
+        <table:table data="${sesongs}" id="l_no_ciber_mangekampen_model_Sesong" path="/sesongs" z="zOGFCOUW2rcxvrh4UGwgBjgE2ac=">
+            <table:column id="c_no_ciber_mangekampen_model_Sesong_navn" property="navn" z="a7psLNscZSKoSTzXxRoZNPbxoQc="/>
+            <table:column id="c_no_ciber_mangekampen_model_Sesong_ovelser" property="ovelser" z="DHScmAMmrEOkE89uuFeiXDiOIIY="/>
+        </table:table>
+    </page:list>
+</div>

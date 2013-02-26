@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_no_ciber_mangekampen_model_Deltakelse" object="${deltakelse}" path="/deltakelses" z="L+2Mz1d3lOJIpmefryTAxdZPxSM=">
+        <field:display field="deltaker" id="s_no_ciber_mangekampen_model_Deltakelse_deltaker" object="${deltakelse}" z="dnssZZ1koIHOjVwwXWnwVwifKbk="/>
+        <field:display field="resultat" id="s_no_ciber_mangekampen_model_Deltakelse_resultat" object="${deltakelse}" z="M58ZWjJnbVDdhqeQUgcfS7tMujQ="/>
+    </page:show>
+</div>

@@ -1,0 +1,29 @@
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-02-25 17:40:06
+project --topLevelPackage no.ciber.mangekampen --projectName Mangekampen --java 6 --packaging JAR
+jpa setup --database HYPERSONIC_IN_MEMORY --provider HIBERNATE 
+entity jpa --class ~.model.Sesong
+entity jpa --class ~.model.Ovelse
+entity jpa --class ~.model.Deltakelse
+entity jpa --class ~.model.Deltaker
+field string --fieldName navn --notNull --unique --class ~.model.Sesong
+field set --fieldName ovelser --type ~.model.Ovelse --class ~.model.Sesong
+field string --fieldName navn --notNull --unique --class ~.model.Ovelse
+field string --fieldName gruppeType  --class ~.model.Ovelse
+field date --fieldName dato --type java.util.Date --class ~.model.Ovelse
+field set --fieldName deltakelser --type ~.model.Deltakelse --class ~.model.Ovelse
+field reference --fieldName deltaker --type ~.model.Deltaker --class ~.model.Deltakelse
+field number --fieldName resultat --type java.lang.Number --class ~.model.Deltakelse
+field string --fieldName brukernavn --class ~.model.Deltaker --unique
+field string --fieldName fornavn --class ~.model.Deltaker
+field string --fieldName etternavn --class ~.model.Deltaker
+field boolean --fieldName isMale --class ~.model.Deltaker
+field date --fieldName created --type java.util.Date --class ~.model.Deltaker
+// script --file mangenkampen.roo
+exit
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2013-02-25 17:41:01
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-02-25 17:41:39
+osgi start --url file:///C:/Prosjekter/roo-twitter-bootstrap/target/com.ct.roo.addon.tbootstrap-0.1.0.BUILD-SNAPSHOT.jar
+web mvc setup
+web mvc install bootstrap
+web mvc all --package no.ciber.mangekampen.web
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2013-02-25 18:00:30

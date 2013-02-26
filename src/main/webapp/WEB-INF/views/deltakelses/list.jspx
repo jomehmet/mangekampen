@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_no_ciber_mangekampen_model_Deltakelse" items="${deltakelses}" z="0hGpf9RELDnQNhZ3sOJvIffNYyA=">
+        <table:table data="${deltakelses}" id="l_no_ciber_mangekampen_model_Deltakelse" path="/deltakelses" z="vIi1AoPkNP7xwbKvi5qQ2aI3eHI=">
+            <table:column id="c_no_ciber_mangekampen_model_Deltakelse_deltaker" property="deltaker" z="QiV0vAZfar0v1rSCW5YFbfX/uDU="/>
+            <table:column id="c_no_ciber_mangekampen_model_Deltakelse_resultat" property="resultat" z="QIkclAFNTRPmU3LS/NBnPsYSYiY="/>
+        </table:table>
+    </page:list>
+</div>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_no_ciber_mangekampen_model_Deltaker" object="${deltaker}" path="/deltakers" z="GTxwKtVpRewVvPYtQwA4jKfjWSU=">
+        <field:display field="brukernavn" id="s_no_ciber_mangekampen_model_Deltaker_brukernavn" object="${deltaker}" z="OaQFxULya0h82/mct9mtWs48Bpo="/>
+        <field:display field="fornavn" id="s_no_ciber_mangekampen_model_Deltaker_fornavn" object="${deltaker}" z="fU2z8LjjhzqZb32AnSPWACD0V7c="/>
+        <field:display field="etternavn" id="s_no_ciber_mangekampen_model_Deltaker_etternavn" object="${deltaker}" z="13Rgl6zn8rv7dAp1zJEnq8N0uUM="/>
+        <field:display field="isMale" id="s_no_ciber_mangekampen_model_Deltaker_isMale" object="${deltaker}" z="62sQ3NN+jr0G7/4gCz56/8HoOfQ="/>
+    </page:show>
+</div>

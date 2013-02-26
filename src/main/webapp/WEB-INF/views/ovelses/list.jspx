@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_no_ciber_mangekampen_model_Ovelse" items="${ovelses}" z="tdqBCHeA1er7tAvezR9EycxOV/k=">
+        <table:table data="${ovelses}" id="l_no_ciber_mangekampen_model_Ovelse" path="/ovelses" z="YwBxZkFLnd21BHDP1yJ3jYW6d74=">
+            <table:column id="c_no_ciber_mangekampen_model_Ovelse_navn" property="navn" z="AgA0/pIpLkf8VFyeIBQIkA0uw+c="/>
+            <table:column id="c_no_ciber_mangekampen_model_Ovelse_gruppeType" property="gruppeType" z="iEPzU/Yb2kEeRhlPNaNpgIT9L2w="/>
+            <table:column date="true" dateTimePattern="${ovelse_dato_date_format}" id="c_no_ciber_mangekampen_model_Ovelse_dato" property="dato" z="big6tsxLc3LdnN/Blj7UPLTiBgM="/>
+            <table:column id="c_no_ciber_mangekampen_model_Ovelse_deltakelser" property="deltakelser" z="DURDPmUacI1zbI1yLQpDRmXURMo="/>
+        </table:table>
+    </page:list>
+</div>
