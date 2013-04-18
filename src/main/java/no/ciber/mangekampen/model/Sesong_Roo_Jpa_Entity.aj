@@ -8,7 +8,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Version;
 import no.ciber.mangekampen.model.Sesong;
 
 privileged aspect Sesong_Roo_Jpa_Entity {
@@ -20,24 +19,12 @@ privileged aspect Sesong_Roo_Jpa_Entity {
     @Column(name = "id")
     private Long Sesong.id;
     
-    @Version
-    @Column(name = "version")
-    private Integer Sesong.version;
-    
     public Long Sesong.getId() {
         return this.id;
     }
     
     public void Sesong.setId(Long id) {
         this.id = id;
-    }
-    
-    public Integer Sesong.getVersion() {
-        return this.version;
-    }
-    
-    public void Sesong.setVersion(Integer version) {
-        this.version = version;
     }
     
 }

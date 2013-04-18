@@ -2,7 +2,7 @@
 <div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
-    <form:update id="fu_no_ciber_mangekampen_model_Sesong" modelAttribute="sesong" path="/sesongs" versionField="Version" z="j0l/YtXtGQfz2jr9CqD674hNs4k=">
+    <form:update id="fu_no_ciber_mangekampen_model_Sesong" modelAttribute="sesong" path="/sesongs" versionField="none" z="XablUUl9kzxJDi7qI7S2UvHrFU4=">
         <field:input field="navn" id="c_no_ciber_mangekampen_model_Sesong_navn" required="true" z="gLCdg3CnJrtJoC4369Ck/n79+2k="/>
         <field:select field="ovelser" id="c_no_ciber_mangekampen_model_Sesong_ovelser" itemValue="id" items="${ovelses}" multiple="true" path="/ovelses" z="YGsULBjBDLeb+0xqN4dRssnkLF4="/>
     </form:update>
