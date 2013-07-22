@@ -7,7 +7,7 @@
 	<div class="hero" data-viewModel="viewModels/SesongerViewModel">
 		<table data-bind="foreach:sesonger()">
 			<tr>
-				<td><input type="text" data-bind="value:navn,valueUpdate:'afterkeydown'" /></td><td data-bind="text:navn"></td>
+				<td><input type="text" data-bind="value:navn" /></td><td data-bind="text:navn"></td>
 			</tr>
 		</table>
 	</div>
