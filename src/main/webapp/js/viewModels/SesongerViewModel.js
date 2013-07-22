@@ -14,11 +14,11 @@ define([],function(){
 	return SesongerViewModel;
 });
 
-function putObject(koObject, controller){	
+function putObject(koObject, controller){
 	$.ajax({
-		url: CONTEXT_PATH + controller + "/" + koObject.id(),
+		url: CONTEXT_PATH + controller + '/' + koObject.id(),
 		data: JSON.stringify(ko.mapping.toJS(koObject)),
-		type: "put",
+		type: 'put',
 		dataType: 'json'
 	});
 }
