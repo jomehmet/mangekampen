@@ -16,12 +16,20 @@ privileged aspect Deltaker_Roo_Json {
         return new JSONSerializer().exclude("*.class").serialize(this);
     }
     
+    public String Deltaker.toJson(String[] fields) {
+        return new JSONSerializer().include(fields).exclude("*.class").serialize(this);
+    }
+    
     public static Deltaker Deltaker.fromJsonToDeltaker(String json) {
         return new JSONDeserializer<Deltaker>().use(null, Deltaker.class).deserialize(json);
     }
     
     public static String Deltaker.toJsonArray(Collection<Deltaker> collection) {
         return new JSONSerializer().exclude("*.class").serialize(collection);
+    }
+    
+    public static String Deltaker.toJsonArray(Collection<Deltaker> collection, String[] fields) {
+        return new JSONSerializer().include(fields).exclude("*.class").serialize(collection);
     }
     
     public static Collection<Deltaker> Deltaker.fromJsonArrayToDeltakers(String json) {

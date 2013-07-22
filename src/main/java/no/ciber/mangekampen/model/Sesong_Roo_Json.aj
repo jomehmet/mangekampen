@@ -16,12 +16,20 @@ privileged aspect Sesong_Roo_Json {
         return new JSONSerializer().exclude("*.class").serialize(this);
     }
     
+    public String Sesong.toJson(String[] fields) {
+        return new JSONSerializer().include(fields).exclude("*.class").serialize(this);
+    }
+    
     public static Sesong Sesong.fromJsonToSesong(String json) {
         return new JSONDeserializer<Sesong>().use(null, Sesong.class).deserialize(json);
     }
     
     public static String Sesong.toJsonArray(Collection<Sesong> collection) {
         return new JSONSerializer().exclude("*.class").serialize(collection);
+    }
+    
+    public static String Sesong.toJsonArray(Collection<Sesong> collection, String[] fields) {
+        return new JSONSerializer().include(fields).exclude("*.class").serialize(collection);
     }
     
     public static Collection<Sesong> Sesong.fromJsonArrayToSesongs(String json) {
