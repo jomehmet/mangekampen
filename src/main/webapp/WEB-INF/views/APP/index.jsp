@@ -9,7 +9,13 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <spring:eval expression='pageContext.request.contextPath' var="contextPath" />
 <div class="row-fluid">
-	<div class="span12">
-		Sesonger
+	<div class="span12" data-viewModel="viewModels/SesongerViewModel">
+		<h1>Sesonger</h1>
+		<table data-bind="foreach:sesonger()">
+			<tr>
+				<td><input type="text" data-bind="value:navn" /></td>
+			</tr>
+		</table>
+		<input type="text" data-bind="value:itemToAdd" placeholder="Legg til en sesong.." />
 	</div>
 </div>
