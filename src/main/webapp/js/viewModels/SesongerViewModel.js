@@ -19,7 +19,8 @@ function putObject(koObject, controller){
 		url: CONTEXT_PATH + controller + '/' + koObject.id(),
 		data: JSON.stringify(ko.mapping.toJS(koObject)),
 		type: 'PUT',
-		dataType: 'json'
+		dataType: 'json',
+		contentType: 'application/json' 
 	});
 }
 function getObjects(self, controller){
