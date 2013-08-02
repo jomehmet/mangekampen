@@ -21,5 +21,10 @@
     <put-attribute name="header" value="/WEB-INF/views/header.jspx" />
     <put-attribute name="footer" value="/WEB-INF/views/footer.jspx" />
   </definition>
+  
+  <definition name="bootstrap" template="/WEB-INF/layouts/bootstrap.jsp">
+    <put-attribute name="header" value="/WEB-INF/views/APP/header.jsp" />
+    <put-attribute name="footer" value="/WEB-INF/views/APP/footer.jsp" />
+  </definition>
 
 </tiles-definitions>

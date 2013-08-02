@@ -11,6 +11,12 @@ public class RootController {
 	@RequestMapping("")
 	public String root(ModelMap model){
 		
+		return "APP/index";
+	}
+	
+	@RequestMapping("roo")
+	public String roo(ModelMap model){
+		
 		return "index";
 	}
 }
