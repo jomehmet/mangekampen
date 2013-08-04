@@ -2,20 +2,26 @@
 
   <jsp:output omit-xml-declaration="yes" />
 
-  <spring:url value="/resources/styles/bootstrap.css" var="bootstrap_url" />
+  <spring:url value="/resources/libs/bootstrap/css/bootstrap.css" var="bootstrap_css_url" />
+  <spring:url value="/resources/libs/bootstrap/js/bootstrap.js" var="bootstrap_js_url" />
+  
   <spring:url value="/resources/js/require.js" var="require_js_url" />
   <spring:url value="/resources/js/knockout.mapping-latest.js" var="knockout_mapping_url" />
   
   <spring:url value="/resources/js/common/requireConfig.js" var="require_config_url" />
   <spring:url value="/resources/js/common/init.js" var="init_url" />
   
-  <link rel="stylesheet" href="${bootstrap_url}"/>
+  <spring:url value="/resources/styles/custom.css" var="custom_css" />
+  
+  <link rel="stylesheet" href="${bootstrap_css_url}"/>
+  <link rel="stylesheet" href="${custom_css}"/>
   
   <script type="text/javascript">
   	var CONTEXT_PATH = '<spring:url value="/" />';
   </script>
     
   <script src="http://code.jquery.com/jquery-1.9.1.min.js"><!-- required for FF3 and Opera --></script>
+  <script src="${bootstrap_js_url}"><!-- required for FF3 and Opera --></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/knockout/2.2.0/knockout-min.js" type="text/javascript"><!-- required for FF3 and Opera --></script>
   <script src="${knockout_mapping_url}" type="text/javascript"><!-- required for FF3 and Opera --></script>
   <script src="${require_js_url}" type="text/javascript"><!-- required for FF3 and Opera --></script>

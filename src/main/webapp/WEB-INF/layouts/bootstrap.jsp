@@ -19,11 +19,7 @@
 	<head>
 		<title>Mangekampen</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="description" content="" />
-	    <meta name="author" content="" />
-		
-		<util:load-custom-scripts />
-		
+		<util:load-custom-scripts />		
 	</head>
   	<body>
   		<tiles:insertAttribute name="header" ignore="true"/>
