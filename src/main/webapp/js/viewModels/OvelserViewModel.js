@@ -1,20 +1,12 @@
-define(["viewModels/ItemViewModel","viewModels/ItemsViewModel"],function(ItemViewModel, ItemsViewModel){
-	
-	function OvelseViewModel(data){
-		var self = this;
-		$.extend(self, new ItemViewModel("ovelses", data, this));
+define(["viewModels/OvelseViewModel","viewModels/ItemsViewModel"],function(OvelseViewModel, ItemsViewModel){
 		
-		this.navn = ko.observable(data.navn);		
-		this.navn.subscribe(function(newValue){
-			self.updateObject();
-		});
+	function OvelserViewModel(ovelser, addHandler){	
+		$.extend(this, new ItemsViewModel("ovelses", OvelseViewModel, addHandler));
 		
-	}
-	
-	function OvelserViewModel(){	
-		$.extend(this, new ItemsViewModel("ovelses", OvelseViewModel));
-
-		this.getAll();
+		if(ovelser)
+			this.addAll(ovelser);
+		else
+			this.getAll();
 	}
 	return OvelserViewModel;
 });

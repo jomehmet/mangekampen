@@ -8,7 +8,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Version;
 import no.ciber.mangekampen.model.Deltaker;
 
 privileged aspect Deltaker_Roo_Jpa_Entity {
@@ -20,24 +19,12 @@ privileged aspect Deltaker_Roo_Jpa_Entity {
     @Column(name = "id")
     private Long Deltaker.id;
     
-    @Version
-    @Column(name = "version")
-    private Integer Deltaker.version;
-    
     public Long Deltaker.getId() {
         return this.id;
     }
     
     public void Deltaker.setId(Long id) {
         this.id = id;
-    }
-    
-    public Integer Deltaker.getVersion() {
-        return this.version;
-    }
-    
-    public void Deltaker.setVersion(Integer version) {
-        this.version = version;
     }
     
 }

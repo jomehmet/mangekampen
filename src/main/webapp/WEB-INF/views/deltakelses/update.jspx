@@ -2,7 +2,7 @@
 <div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
-    <form:update id="fu_no_ciber_mangekampen_model_Deltakelse" modelAttribute="deltakelse" path="/deltakelses" versionField="Version" z="BfuwLllXb01kbc7kRmCyWixr3WI=">
+    <form:update id="fu_no_ciber_mangekampen_model_Deltakelse" modelAttribute="deltakelse" path="/deltakelses" versionField="none" z="auH3Ogs7FplvO7E0ZdfJeHSqGUw=">
         <field:select field="deltaker" id="c_no_ciber_mangekampen_model_Deltakelse_deltaker" itemValue="id" items="${deltakers}" path="/deltakers" z="AN3i3UPbR9xUK94QeDMz9M9+4vc="/>
         <field:input field="resultat" id="c_no_ciber_mangekampen_model_Deltakelse_resultat" z="hyysUBfurSKM4XnFZYW+qC1f1d4="/>
     </form:update>

@@ -13,11 +13,11 @@ import no.ciber.mangekampen.model.Sesong;
 privileged aspect Sesong_Roo_Json {
     
     public String Sesong.toJson() {
-        return new JSONSerializer().exclude("*.class").serialize(this);
+        return new JSONSerializer().exclude("*.class").deepSerialize(this);
     }
     
     public String Sesong.toJson(String[] fields) {
-        return new JSONSerializer().include(fields).exclude("*.class").serialize(this);
+        return new JSONSerializer().include(fields).exclude("*.class").deepSerialize(this);
     }
     
     public static Sesong Sesong.fromJsonToSesong(String json) {
@@ -25,11 +25,11 @@ privileged aspect Sesong_Roo_Json {
     }
     
     public static String Sesong.toJsonArray(Collection<Sesong> collection) {
-        return new JSONSerializer().exclude("*.class").serialize(collection);
+        return new JSONSerializer().exclude("*.class").deepSerialize(collection);
     }
     
     public static String Sesong.toJsonArray(Collection<Sesong> collection, String[] fields) {
-        return new JSONSerializer().include(fields).exclude("*.class").serialize(collection);
+        return new JSONSerializer().include(fields).exclude("*.class").deepSerialize(collection);
     }
     
     public static Collection<Sesong> Sesong.fromJsonArrayToSesongs(String json) {

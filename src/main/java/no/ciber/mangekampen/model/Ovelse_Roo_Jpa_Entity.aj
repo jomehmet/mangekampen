@@ -8,7 +8,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Version;
 import no.ciber.mangekampen.model.Ovelse;
 
 privileged aspect Ovelse_Roo_Jpa_Entity {
@@ -20,24 +19,12 @@ privileged aspect Ovelse_Roo_Jpa_Entity {
     @Column(name = "id")
     private Long Ovelse.id;
     
-    @Version
-    @Column(name = "version")
-    private Integer Ovelse.version;
-    
     public Long Ovelse.getId() {
         return this.id;
     }
     
     public void Ovelse.setId(Long id) {
         this.id = id;
-    }
-    
-    public Integer Ovelse.getVersion() {
-        return this.version;
-    }
-    
-    public void Ovelse.setVersion(Integer version) {
-        this.version = version;
     }
     
 }

@@ -17,7 +17,7 @@ import org.springframework.roo.addon.tostring.RooToString;
 
 @RooJavaBean
 @RooToString
-@RooJpaActiveRecord
+@RooJpaActiveRecord(versionField="")
 @RooJson
 public class Ovelse {
 

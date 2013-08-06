@@ -10,11 +10,7 @@
 <spring:eval expression='pageContext.request.contextPath' var="contextPath" />
 
 <div data-bind="with: sesongerViewModel" data-viewname="sesonger">
-	<div class="row">
-		<div class="col-lg-6">
-			<h2>Sesonger</h2>
-		</div>
-	</div>
+
 	<div data-bind="foreach:collection()">
 		<div class="row aSesong" data-bind="visible: !isRemoved()">
 			<div class="col-lg-12 form-inline control">
@@ -23,7 +19,10 @@
 				<button data-bind="click:remove" class="btn">slett</button>
 			</div>
 			<div class="col-lg-12 edit" data-bind="visible: isEdit">
-				<h4>Øvelser</h4>
+				<div data-bind="foreach:ovelser.collection()">
+					<span data-bind="text:navn"></span>,
+				</div>
+				<input data-bind="value:ovelser.itemToAdd" placeholder="Legg til en ny øvelse" />
 			</div>
 		</div>
 	</div>
@@ -35,11 +34,7 @@
 </div> 
 
 <div data-bind="with: ovelserViewModel" style="display:none" data-viewname="ovelser">
-	<div class="row">
-		<div class="col-lg-6">
-			<h2>Øvelser</h2>
-		</div>
-	</div>
+
 	<div data-bind="foreach:collection()">
 		<div class="row aSesong" data-bind="visible: !isRemoved()">
 			<div class="col-lg-12 form-inline control">
@@ -60,11 +55,6 @@
 </div>
 
 <div data-bind="with: deltakereViewModel" style="display:none" data-viewname="deltakere">
-	<div class="row">
-		<div class="col-lg-6">
-			<h2>Deltakere</h2>
-		</div>
-	</div>
 	<div data-bind="foreach:collection()">
 		<div class="row aSesong" data-bind="visible: !isRemoved()">
 			<div class="col-lg-12 form-inline control">
