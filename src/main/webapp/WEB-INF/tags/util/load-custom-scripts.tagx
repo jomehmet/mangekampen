@@ -10,6 +10,7 @@
   
   <spring:url value="/resources/js/common/requireConfig.js" var="require_config_url" />
   <spring:url value="/resources/js/common/init.js" var="init_url" />
+  <spring:url value="/resources/js/customBindings/bindings.js" var="custom_bindings_url" />
   
   <spring:url value="/resources/styles/custom.css" var="custom_css" />
   
@@ -24,6 +25,7 @@
   <script src="${bootstrap_js_url}"><!-- required for FF3 and Opera --></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/knockout/2.2.0/knockout-min.js" type="text/javascript"><!-- required for FF3 and Opera --></script>
   <script src="${knockout_mapping_url}" type="text/javascript"><!-- required for FF3 and Opera --></script>
+  <script src="${custom_bindings_url}" type="text/javascript"><!-- required for FF3 and Opera --></script>
   <script src="${require_js_url}" type="text/javascript"><!-- required for FF3 and Opera --></script>
   <script src="${require_config_url}" type="text/javascript"><!-- required for FF3 and Opera --></script>
   <script src="${init_url}" type="text/javascript"><!-- required for FF3 and Opera --></script>

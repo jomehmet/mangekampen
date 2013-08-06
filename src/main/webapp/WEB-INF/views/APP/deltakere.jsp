@@ -16,7 +16,7 @@
 		</div>
 	</div>
 	<div data-bind="foreach:collection()">
-		<div class="row aSesong" data-bind="visible: !isRemoved()">
+		<div class="row aSesong" data-bind="visible: !removed()">
 			<div class="col-lg-12 form-inline control">
 				<input type="text" data-bind="value:navn" />
 				<button data-bind="click:edit" class="btn">rediger</button>
@@ -32,7 +32,7 @@
 			<input type="text" data-bind="value:itemToAdd" placeholder="Legg til en sesong.." />
 		</div>
 	</div>
-</div> 
+</div>
 
 <div data-bind="with: ovelserViewModel" style="display:none" data-viewname="ovelser">
 	<div class="row">
@@ -41,7 +41,7 @@
 		</div>
 	</div>
 	<div data-bind="foreach:collection()">
-		<div class="row aSesong" data-bind="visible: !isRemoved()">
+		<div class="row aSesong" data-bind="visible: !removed()">
 			<div class="col-lg-12 form-inline control">
 				<input type="text" data-bind="value:navn" />
 				<button data-bind="click:edit" class="btn">rediger</button>
@@ -66,20 +66,20 @@
 		</div>
 	</div>
 	<div data-bind="foreach:collection()">
-		<div class="row aSesong" data-bind="visible: !isRemoved()">
+		<div class="row aSesong" data-bind="visible: !removed()">
 			<div class="col-lg-12 form-inline control">
 				<input type="text" data-bind="value:brukernavn" />
 				<button data-bind="click:edit" class="btn">rediger</button>
 				<button data-bind="click:remove" class="btn">slett</button>
 			</div>
 			<div class="col-lg-12 edit" data-bind="visible: isEdit">
-				<h4>Flere felter..</h4>
+				<h4>Øvelser</h4>
 			</div>
 		</div>
 	</div>
 	<div class="row">
 		<div class="col-lg-6">
-			<input type="text" data-bind="value:itemToAdd" placeholder="Legg til en deltaker.." />
+			<input type="text" data-bind="value:itemToAdd" placeholder="Legg til en deltaker..." />
 		</div>
 	</div>
 </div>

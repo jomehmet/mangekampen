@@ -21,9 +21,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<util:load-custom-scripts />		
 	</head>
-  	<body>
+  	<body data-viewmodel="viewModels/AppViewModel">
   		<tiles:insertAttribute name="header" ignore="true"/>
-  		<div class="container" id="mainContainer" >
+  		<div class="container" id="mainContainer">
   			<tiles:insertAttribute name="body"/>
   			<tiles:insertAttribute name="footer"/>
   		</div>

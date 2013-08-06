@@ -25,8 +25,9 @@
 		<a class="navbar-brand" href="#">Mangekampen</a>
 		<div class="nav-collapse collapse">
 			<ul class="nav navbar-nav">
-				<li class="active"><a href="#">Sesonger</a></li>
-				<li><a href="#ovelser">Øvelser</a></li>
+				<li><a data-bind="changeView:'sesonger'" href="#sesonger">Sesonger</a></li>
+				<li><a data-bind="changeView:'ovelser'" href="#ovelser">Øvelser</a></li>
+				<li><a data-bind="changeView:'deltakere'" href="#deltakere">Deltakere</a></li>
 			</ul>
 		</div>
 		<!--/.nav-collapse -->
