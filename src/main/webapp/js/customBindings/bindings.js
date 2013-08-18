@@ -29,6 +29,6 @@ ko.bindingHandlers.datePicker = {
 	    	
 	    	$elm = $(element);
 	    	
-	    	$elm.datepicker({ dateFormat: "yy/mm/dd"});
+	    	$elm.datepicker({ dateFormat: "dd/mm/yy"});
 	    }
 	};

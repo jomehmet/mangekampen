@@ -31,7 +31,7 @@ public class Ovelse {
     private String gruppeType;
 
     @Temporal(TemporalType.TIMESTAMP)
-    @DateTimeFormat(iso=ISO.DATE)
+    @DateTimeFormat(pattern="mm/dd/yy")
     private Date dato;
 
     @ManyToMany(cascade = CascadeType.ALL)
