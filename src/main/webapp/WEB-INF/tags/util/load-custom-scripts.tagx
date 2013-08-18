@@ -14,6 +14,7 @@
   
   <spring:url value="/resources/styles/custom.css" var="custom_css" />
   
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css"/>
   <link rel="stylesheet" href="${bootstrap_css_url}"/>
   <link rel="stylesheet" href="${custom_css}"/>
   
@@ -22,6 +23,7 @@
   </script>
     
   <script src="http://code.jquery.com/jquery-1.9.1.min.js"><!-- required for FF3 and Opera --></script>
+  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"><!-- required for FF3 and Opera --></script>
   <script src="${bootstrap_js_url}"><!-- required for FF3 and Opera --></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/knockout/2.2.0/knockout-min.js" type="text/javascript"><!-- required for FF3 and Opera --></script>
   <script src="${knockout_mapping_url}" type="text/javascript"><!-- required for FF3 and Opera --></script>

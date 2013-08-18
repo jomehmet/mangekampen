@@ -32,7 +32,10 @@
 	<div data-bind="foreach:collection()">
 		<div class="row aSesong" data-bind="visible: !isRemoved()">
 			<div class="col-lg-12 form-inline control">
-				<input type="text" data-bind="value:navn" />
+				<span data-bind="text:id" title="id"></span>
+				<input type="text" data-bind="value:navn" placeholder="Navn" />
+				<input type="text" data-bind="value:gruppeType" placeholder="Gruppetype" />
+				<input type="text" data-bind="value:dato, datePicker:dato" placeholder="Dato" />
 				<button data-bind="click:edit" class="btn">rediger</button>
 				<button data-bind="click:remove" class="btn">slett</button>
 			</div>
@@ -49,7 +52,11 @@
 	<div data-bind="foreach:collection()">
 		<div class="row aSesong" data-bind="visible: !isRemoved()">
 			<div class="col-lg-12 form-inline control">
+				<span data-bind="text:id" title="id"></span>
+				<span data-bind="text:created" title="Opprettet"></span>
 				<input type="text" data-bind="value:brukernavn" />
+				<input type="text" data-bind="value:fornavn" />
+				<input type="text" data-bind="value:etternavn" />
 				<button data-bind="click:edit" class="btn">rediger</button>
 				<button data-bind="click:remove" class="btn">slett</button>
 			</div>

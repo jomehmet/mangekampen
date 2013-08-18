@@ -21,3 +21,14 @@ ko.bindingHandlers.changeView = {
 			self.setActiveMenu(location.hash.replace("#",""));
     }
 };
+
+ko.bindingHandlers.datePicker = {
+	    init: function(element, valueAccessor, allBindingsAccessor, viewModel) {
+
+	    	var value = valueAccessor(), allBindings = allBindingsAccessor();
+	    	
+	    	$elm = $(element);
+	    	
+	    	$elm.datepicker({ dateFormat: "yy/mm/dd"});
+	    }
+	};

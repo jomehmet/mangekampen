@@ -9,8 +9,6 @@ import javax.validation.Valid;
 import no.ciber.mangekampen.model.Deltakelse;
 import no.ciber.mangekampen.model.Ovelse;
 import no.ciber.mangekampen.web.OvelseController;
-import org.joda.time.format.DateTimeFormat;
-import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -41,7 +39,6 @@ privileged aspect OvelseController_Roo_Controller {
     
     @RequestMapping(value = "/{id}", produces = "text/html")
     public String OvelseController.show(@PathVariable("id") Long id, Model uiModel) {
-        addDateTimeFormatPatterns(uiModel);
         uiModel.addAttribute("ovelse", Ovelse.findOvelse(id));
         uiModel.addAttribute("itemId", id);
         return "ovelses/show";
@@ -58,7 +55,6 @@ privileged aspect OvelseController_Roo_Controller {
         } else {
             uiModel.addAttribute("ovelses", Ovelse.findAllOvelses());
         }
-        addDateTimeFormatPatterns(uiModel);
         return "ovelses/list";
     }
     
@@ -89,13 +85,8 @@ privileged aspect OvelseController_Roo_Controller {
         return "redirect:/ovelses";
     }
     
-    void OvelseController.addDateTimeFormatPatterns(Model uiModel) {
-        uiModel.addAttribute("ovelse_dato_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
-    }
-    
     void OvelseController.populateEditForm(Model uiModel, Ovelse ovelse) {
         uiModel.addAttribute("ovelse", ovelse);
-        addDateTimeFormatPatterns(uiModel);
         uiModel.addAttribute("deltakelses", Deltakelse.findAllDeltakelses());
     }
     
