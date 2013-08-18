@@ -9,7 +9,7 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <spring:eval expression='pageContext.request.contextPath' var="contextPath" />
 
-<div data-bind="with: sesongerViewModel" data-viewname="sesonger">
+<div data-bind="with: sesongerViewModel" data-viewname="sesonger" style="display:none">
 
 	<div data-bind="foreach:collection()">
 		<div class="row aSesong" data-bind="visible: !isRemoved()">
@@ -17,12 +17,6 @@
 				<input type="text" data-bind="value:navn" />
 				<button data-bind="click:edit" class="btn">rediger</button>
 				<button data-bind="click:remove" class="btn">slett</button>
-			</div>
-			<div class="col-lg-12 edit" data-bind="visible: isEdit">
-				<div data-bind="foreach:ovelser.collection()">
-					<span data-bind="text:navn"></span>,
-				</div>
-				<input data-bind="value:ovelser.itemToAdd" placeholder="Legg til en ny øvelse" />
 			</div>
 		</div>
 	</div>
@@ -42,9 +36,6 @@
 				<button data-bind="click:edit" class="btn">rediger</button>
 				<button data-bind="click:remove" class="btn">slett</button>
 			</div>
-			<div class="col-lg-12 edit" data-bind="visible: isEdit">
-				<h4>Øvelser</h4>
-			</div>
 		</div>
 	</div>
 	<div class="row">
@@ -61,9 +52,6 @@
 				<input type="text" data-bind="value:brukernavn" />
 				<button data-bind="click:edit" class="btn">rediger</button>
 				<button data-bind="click:remove" class="btn">slett</button>
-			</div>
-			<div class="col-lg-12 edit" data-bind="visible: isEdit">
-				<h4>Flere felter..</h4>
 			</div>
 		</div>
 	</div>

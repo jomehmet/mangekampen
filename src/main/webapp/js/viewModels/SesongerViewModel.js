@@ -9,13 +9,7 @@ define(["common/crudService","viewModels/ItemViewModel","viewModels/ItemsViewMod
 		this.navn = ko.observable(data.navn);		
 		this.navn.subscribe(function(newValue){
 			self.updateObject();
-		});
-
-		this.ovelser = new OvelserViewModel(data.ovelser, function(obj){
-			self.ovelser.collection.push(obj);
-			self.updateObject();
-		});
-		
+		});		
 	}
 	
 	function SesongerViewModel(){	

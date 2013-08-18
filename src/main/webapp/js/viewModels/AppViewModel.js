@@ -3,7 +3,7 @@ define(["viewModels/SesongerViewModel", "viewModels/OvelserViewModel", "viewMode
 	function AppViewModel(){
 		var self = this;
 		
-		this.activeView = ko.observable("sesonger");
+		this.activeView = ko.observable("deltakere");
 		
 		this.sesongerViewModel = new SesongerViewModel();
 		this.ovelserViewModel = new OvelserViewModel();
@@ -12,6 +12,9 @@ define(["viewModels/SesongerViewModel", "viewModels/OvelserViewModel", "viewMode
 		this.changeView = function(activeView){
 			self.activeView(activeView);
 		};
+		
+		init:{
+		}
 		
 	}
 	return AppViewModel;
