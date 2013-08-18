@@ -12,11 +12,21 @@
 <div data-bind="with: sesongerViewModel" data-viewname="sesonger" style="display:none">
 
 	<div data-bind="foreach:collection()">
-		<div class="row aSesong" data-bind="visible: !isRemoved()">
+		<div class="row aSesong" data-bind="visible: !isRemoved(), css:{edit:isEdit()}">
 			<div class="col-lg-12 form-inline control">
-				<input type="text" data-bind="value:navn" />
+				<span data-bind="text:navn, visible:!isEdit()"></span>
+				<input type="text" data-bind="value:navn, visible:isEdit" style="display:none" />
 				<button data-bind="click:edit" class="btn">rediger</button>
-				<button data-bind="click:remove" class="btn">slett</button>
+				<button data-bind="click:remove, visible:isEdit" style="display:none" class="btn">slett</button>
+			</div>
+			<div data-bind="visible:isEdit" style="display:none">
+				<ul data-bind="foreach:ovelser">
+					<li>
+					<span data-bind="text:navn"></span>
+					<a href="#" data-bind="click:$parent.removeOvelse">(fjern)</a>
+					</li>
+				</ul>
+				<input data-bind="value:ovelseToAdd" placeholder="Legg til en øvelse" />
 			</div>
 		</div>
 	</div>

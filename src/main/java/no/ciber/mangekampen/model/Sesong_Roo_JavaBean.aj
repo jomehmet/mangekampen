@@ -3,7 +3,7 @@
 
 package no.ciber.mangekampen.model;
 
-import java.util.Set;
+import java.util.List;
 import no.ciber.mangekampen.model.Ovelse;
 import no.ciber.mangekampen.model.Sesong;
 
@@ -17,11 +17,11 @@ privileged aspect Sesong_Roo_JavaBean {
         this.navn = navn;
     }
     
-    public Set<Ovelse> Sesong.getOvelser() {
+    public List<Ovelse> Sesong.getOvelser() {
         return this.ovelser;
     }
     
-    public void Sesong.setOvelser(Set<Ovelse> ovelser) {
+    public void Sesong.setOvelser(List<Ovelse> ovelser) {
         this.ovelser = ovelser;
     }
     

@@ -9,7 +9,7 @@ define(["viewModels/ItemViewModel"],function(ItemViewModel){
 			self.updateObject();
 		});
 				
-		this.dato = ko.observable($.datepicker.formatDate( "mm/dd/yy", new Date(data.dato)));
+		this.dato = ko.observable(data.dato? $.datepicker.formatDate( "mm/dd/yy", new Date(data.dato)): undefined);
 		this.dato.subscribe(function(newValue){
 			self.updateObject();
 		});

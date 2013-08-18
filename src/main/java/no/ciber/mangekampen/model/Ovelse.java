@@ -12,7 +12,6 @@ import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
 
 import org.springframework.format.annotation.DateTimeFormat;
-import org.springframework.format.annotation.DateTimeFormat.ISO;
 import org.springframework.roo.addon.javabean.RooJavaBean;
 import org.springframework.roo.addon.jpa.activerecord.RooJpaActiveRecord;
 import org.springframework.roo.addon.json.RooJson;
@@ -25,7 +24,7 @@ import org.springframework.roo.addon.tostring.RooToString;
 public class Ovelse {
 
     @NotNull
-    @Column(unique = true)
+    @Column
     private String navn;
 
     private String gruppeType;

@@ -1,11 +1,14 @@
 package no.ciber.mangekampen.model;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.ManyToMany;
+import javax.persistence.OrderBy;
 import javax.validation.constraints.NotNull;
+
 import org.springframework.roo.addon.javabean.RooJavaBean;
 import org.springframework.roo.addon.jpa.activerecord.RooJpaActiveRecord;
 import org.springframework.roo.addon.json.RooJson;
@@ -18,9 +21,10 @@ import org.springframework.roo.addon.tostring.RooToString;
 public class Sesong {
 
     @NotNull
-    @Column(unique = true)
+    @Column
     private String navn;
 
     @ManyToMany(cascade = CascadeType.ALL)
-    private Set<Ovelse> ovelser = new HashSet<Ovelse>();
+    @OrderBy("dato")
+    private List<Ovelse> ovelser = new ArrayList<Ovelse>();
 }

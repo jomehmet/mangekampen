@@ -1,3 +1,12 @@
 .aSesong .control,.aSesong .edit{
 	margin-bottom: 10px;
 }
+
+.aSesong.edit{
+	padding: 20px;
+	background-color: gray;
+	border: dotted 1px black;
+}
+.aSesong.edit a{
+	color: yellow;
+}
