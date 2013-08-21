@@ -1,4 +1,4 @@
-define(["common/crudService", "viewModels/ItemViewModel"],function(crud, ItemViewModel){
+define(["common/crudService", "viewModels/ItemViewModel", "common/events"],function(crud, ItemViewModel, events){
 		
 	function ItemsViewModel(controller, ItemViewModel, addHandler){
 		var self = this;
@@ -17,6 +17,9 @@ define(["common/crudService", "viewModels/ItemViewModel"],function(crud, ItemVie
 			});
 		};
 		
+		this.removeAll = function(){
+			self.collection.removeAll();
+		}
 
 		this.itemToAdd = ko.observable("");
 		
@@ -36,9 +39,10 @@ define(["common/crudService", "viewModels/ItemViewModel"],function(crud, ItemVie
 			crud.postObject(obj, controller, function(data){
 				self.collection.removeAll();
 				self.getAll();
+				new events.ServerChanged().publish();
 			});
 		};
-		
+				
 		return this;
 	}
 	return ItemsViewModel;

@@ -13,13 +13,14 @@ define([],function(){
 			});
 		}
 
-		crudService.putObject = function(koObject, controller){
+		crudService.putObject = function(koObject, controller, successHandler){
 			$.ajax({
 				url: CONTEXT_PATH + controller + '/' + koObject.id(),
 				data: JSON.stringify(ko.mapping.toJS(koObject)),
 				type: 'put',
 				dataType: 'json',
-				contentType: 'application/json' 
+				contentType: 'application/json',
+				complete:successHandler
 			});
 		};
 		

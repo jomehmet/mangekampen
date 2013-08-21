@@ -1,5 +1,5 @@
-define(["viewModels/SesongerViewModel", "viewModels/OvelserViewModel", "viewModels/DeltakereViewModel"],
-		function(SesongerViewModel, OvelserViewModel, DeltakereViewModel){
+define(["viewModels/SesongerViewModel", "viewModels/OvelserViewModel", "viewModels/DeltakereViewModel", "common/events"],
+		function(SesongerViewModel, OvelserViewModel, DeltakereViewModel, events){
 	function AppViewModel(){
 		var self = this;
 		
@@ -11,6 +11,7 @@ define(["viewModels/SesongerViewModel", "viewModels/OvelserViewModel", "viewMode
 		
 		this.changeView = function(activeView){
 			self.activeView(activeView);
+			new events.ViewChanged(activeView).publish();
 		};
 		
 		init:{

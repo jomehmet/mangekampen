@@ -20,7 +20,7 @@ import org.springframework.roo.addon.tostring.RooToString;
 @RooJavaBean
 @RooToString
 @RooJpaActiveRecord(versionField="")
-@RooJson
+@RooJson(deepSerialize=true)
 public class Ovelse {
 
     @NotNull

@@ -49,11 +49,15 @@
 				<button data-bind="click:edit" class="btn">rediger</button>
 				<button data-bind="click:remove" class="btn">slett</button>
 			</div>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-lg-6">
-			<input type="text" data-bind="value:itemToAdd" placeholder="Legg til en øvelse..." />
+			<div data-bind="visible:isEdit" style="display:none">
+				<ul data-bind="foreach:deltakelser">
+					<li>
+					<span data-bind="text:deltaker.id"></span>
+					<a href="#" data-bind="click:$parent.removeDeltakelse">(fjern)</a>
+					</li>
+				</ul>
+				<select data-bind="options: $root.deltakereViewModel.collection, optionsText:'brukernavn', value:deltakelseToAdd"></select>
+			</div>
 		</div>
 	</div>
 </div>
@@ -64,9 +68,9 @@
 			<div class="col-lg-12 form-inline control">
 				<span data-bind="text:id" title="id"></span>
 				<span data-bind="text:created" title="Opprettet"></span>
-				<input type="text" data-bind="value:brukernavn" />
-				<input type="text" data-bind="value:fornavn" />
-				<input type="text" data-bind="value:etternavn" />
+				<input type="text" data-bind="value:brukernavn" placeholder="Brukernavn" />
+				<input type="text" data-bind="value:fornavn" placeholder="Fornavn" />
+				<input type="text" data-bind="value:etternavn" placeholder="Etternavn" />
 				<button data-bind="click:edit" class="btn">rediger</button>
 				<button data-bind="click:remove" class="btn">slett</button>
 			</div>
@@ -74,7 +78,7 @@
 	</div>
 	<div class="row">
 		<div class="col-lg-6">
-			<input type="text" data-bind="value:itemToAdd" placeholder="Legg til en deltaker.." />
+			<input type="text" data-bind="value:itemToAdd" placeholder="Legg til et brukernavn" />
 		</div>
 	</div>
 </div>

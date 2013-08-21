@@ -1,4 +1,4 @@
-define(["viewModels/ItemViewModel"],function(ItemViewModel){
+define(["viewModels/ItemViewModel", "viewModels/DeltakelseViewModel"],function(ItemViewModel, DeltakelseViewModel){
 	
 	function OvelseViewModel(data){
 		var self = this;
@@ -19,6 +19,17 @@ define(["viewModels/ItemViewModel"],function(ItemViewModel){
 			self.updateObject();
 		});
 		
+		this.deltakelser = ko.observableArray(data.deltakelser);
+		this.deltakelseToAdd = ko.observable();
+		this.deltakelseToAdd.subscribe(function(deltaker){
+				self.deltakelser.push(new DeltakelseViewModel(deltaker.id, 50));
+				self.deltakelseToAdd();
+				self.updateObject();
+		});
+		this.removeOvelse = function(ovelse){
+			self.ovelser.remove(ovelse);
+			self.updateObject();
+		};
 	}
 	
 	return OvelseViewModel;

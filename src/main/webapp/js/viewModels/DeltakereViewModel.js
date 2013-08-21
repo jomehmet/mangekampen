@@ -23,7 +23,7 @@ define(["viewModels/ItemViewModel","viewModels/ItemsViewModel"],function(ItemVie
 			self.brukernavn(value);
 		};
 		
-		this.created = ko.observable($.datepicker.formatDate( "yy/mm/dd", new Date(data.created)));
+		this.created = ko.observable(data.created?$.datepicker.formatDate( "yy/mm/dd", new Date(data.created)):undefined);
 	}
 	
 	function DeltakereViewModel(){	

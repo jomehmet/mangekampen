@@ -16,11 +16,11 @@ privileged aspect Deltakelse_Roo_JavaBean {
         this.deltaker = deltaker;
     }
     
-    public Number Deltakelse.getResultat() {
+    public Double Deltakelse.getResultat() {
         return this.resultat;
     }
     
-    public void Deltakelse.setResultat(Number resultat) {
+    public void Deltakelse.setResultat(Double resultat) {
         this.resultat = resultat;
     }
     

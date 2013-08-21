@@ -1,4 +1,4 @@
-define(["common/crudService"],function(crud){
+define(["common/crudService", "common/events"],function(crud, events){
 		
 	function ItemViewModel(controller, data, inheritor){
 
@@ -7,13 +7,16 @@ define(["common/crudService"],function(crud){
 		this.id = ko.observable(data.id);
 		
 		this.updateObject = function(){
-			crud.putObject(self, controller);
+			crud.putObject(self, controller, function(){;
+				new events.ServerChanged().publish();
+			});
 		};
 		
 		this.isRemoved = ko.observable(false);
 		this.remove = function(){
 			crud.deleteObject(self, controller, function(){
 				self.isRemoved(true);
+				new events.ServerChanged().publish();
 			});
 		};
 		

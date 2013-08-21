@@ -4,7 +4,7 @@
     <jsp:output omit-xml-declaration="yes"/>
     <form:create id="fc_no_ciber_mangekampen_model_Deltakelse" modelAttribute="deltakelse" path="/deltakelses" render="${empty dependencies}" z="Z20sdMdjVRRZWYdvc0i+kJd+MAQ=">
         <field:select field="deltaker" id="c_no_ciber_mangekampen_model_Deltakelse_deltaker" itemValue="id" items="${deltakers}" path="/deltakers" z="AN3i3UPbR9xUK94QeDMz9M9+4vc="/>
-        <field:input field="resultat" id="c_no_ciber_mangekampen_model_Deltakelse_resultat" z="hyysUBfurSKM4XnFZYW+qC1f1d4="/>
+        <field:input field="resultat" id="c_no_ciber_mangekampen_model_Deltakelse_resultat" validationMessageCode="field_invalid_number" z="rVPjOWruhTC+QU7phVtTruLeI5c="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_no_ciber_mangekampen_model_Deltakelse" render="${not empty dependencies}" z="Vex0hD3ZEUXKnxBstXadcSrOAUw="/>
 </div>
