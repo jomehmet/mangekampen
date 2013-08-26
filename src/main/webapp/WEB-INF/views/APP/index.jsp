@@ -52,11 +52,12 @@
 			<div data-bind="visible:isEdit" style="display:none">
 				<ul data-bind="foreach:deltakelser">
 					<li>
-					<span data-bind="text:deltaker.id"></span>
+					<span data-bind="text:id"></span>
 					<a href="#" data-bind="click:$parent.removeDeltakelse">(fjern)</a>
 					</li>
 				</ul>
-				<select data-bind="options: $root.deltakereViewModel.collection, optionsText:'brukernavn', value:deltakelseToAdd"></select>
+				<select data-bind="options: $root.deltakereViewModel.collection, optionsText:'brukernavn', selectedOptions:deltakelserToAdd"
+				multiple="true" ></select>
 			</div>
 		</div>
 	</div>
